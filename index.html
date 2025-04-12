@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSV 第12欄資料點子圖</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- 引入 Chart.js 函式庫 -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Rocket Data Dashboard</h1>
+        <p>請上傳原始 CSV 檔案（抓取第12欄資料）</p>
+
+        <div class="upload-section">
+            <label for="csvFileInput" class="file-label">選擇 CSV 檔案：</label>
+            <input type="file" id="csvFileInput" accept=".csv">
+        </div>
+
+        <div class="chart-container">
+            <canvas id="myChart"></canvas>
+        </div>
+
+        <!-- 新增：統計數據顯示區域 -->
+        <div id="statsDisplay" class="stats-info">
+            <span>中位數: <strong id="medianValue">-</strong></span> |
+            <span>最小值: <strong id="minValue">-</strong></span> |
+            <span>最大值: <strong id="maxValue">-</strong></span>
+        </div>
+        <!-- 結束：新增區域 -->
+
+        <div id="messageArea" class="message"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
