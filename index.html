@@ -11,11 +11,19 @@
 <body>
     <div class="container">
         <h1>Rocket Data Dashboard</h1>
-        <p>請上傳原始 CSV 檔案（抓取第12欄資料）</p>
+        <p>請上傳原始 CSV 檔案</p>
 
         <div class="upload-section">
             <label for="csvFileInput" class="file-label">選擇 CSV 檔案：</label>
             <input type="file" id="csvFileInput" accept=".csv">
+        </div>
+
+        <!-- 新增：欄位選擇 -->
+        <div class="select-section">
+            <label for="columnSelect">選擇欄位：</label>
+            <select id="columnSelect" disabled>
+                <option>請先上傳 CSV</option>
+            </select>
         </div>
 
         <div class="chart-container">
